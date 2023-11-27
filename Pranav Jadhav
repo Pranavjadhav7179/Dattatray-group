@@ -1,0 +1,51 @@
+//Dynamic Constructor 
+#include <iostream> 
+using namespace std; 
+class stud 
+{ 
+int* p;
+
+public:
+
+stud()
+{
+p = new int; 
+*p = 0;
+
+}
+
+stud(int x)
+{
+p = new int; 
+*p = x;
+
+}
+
+void display()
+
+{
+
+cout << *p << endl;
+
+}
+
+~stud()
+
+{
+
+delete p;
+
+}
+
+};
+
+int main()
+{
+stud obj1 = stud(); 
+obj1.display();
+
+stud obj2 = stud(7);
+
+obj2.display();
+
+}
